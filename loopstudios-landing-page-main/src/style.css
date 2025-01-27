@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: Alata;
+    src: url("./fonts/Alata/Alata-Regular.ttf");
+}
+
+@font-face {
+    font-family: Josefin Sans;
+    src: url("./fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf");
+}
+
+@theme{
+    --font-alata: "Alata", sans-serif;
+    --font-josefin: "Josefin Sans",  sans-serif;
+
+    --inset-shadow-grid: inset 100px 0 60px rgba(0, 0, 0, 0.5);
+}
+
+@utility grid-styling {
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    font-family: var(--font-josefin);
+    font-weight: 100;
+    padding: 3.5rem 11rem 1.25rem 1.25rem;
+}
