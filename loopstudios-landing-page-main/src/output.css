@@ -554,6 +554,9 @@
   .z-\[999\] {
     z-index: 999;
   }
+  .z-\[10000\] {
+    z-index: 10000;
+  }
   .my-12 {
     margin-block: calc(var(--spacing) * 12);
   }
@@ -592,6 +595,9 @@
   }
   .h-6 {
     height: calc(var(--spacing) * 6);
+  }
+  .h-svh {
+    height: 100svh;
   }
   .h-vh {
     height: 100vh;
@@ -632,6 +638,10 @@
   .border-1 {
     border-style: var(--tw-border-style);
     border-width: 1px;
+  }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
   }
   .border-black {
     border-color: var(--color-black);
@@ -890,6 +900,21 @@
       position: relative;
     }
   }
+  .lg\:inset-0 {
+    @media (width >= 64rem) {
+      inset: calc(var(--spacing) * 0);
+    }
+  }
+  .lg\:z-\[500\] {
+    @media (width >= 64rem) {
+      z-index: 500;
+    }
+  }
+  .lg\:z-\[998\] {
+    @media (width >= 64rem) {
+      z-index: 998;
+    }
+  }
   .lg\:mx-\[165px\] {
     @media (width >= 64rem) {
       margin-inline: 165px;
@@ -1013,6 +1038,11 @@
   .lg\:bg-white {
     @media (width >= 64rem) {
       background-color: var(--color-white);
+    }
+  }
+  .lg\:overlay-bg {
+    @media (width >= 64rem) {
+      background-color: color-mix(in oklab, #D8D8D8  50%, transparent);
     }
   }
   .lg\:bg-\[url\(\.\/images\/desktop\/image-curiosity\.jpg\)\] {
@@ -1150,6 +1180,18 @@
     @media (width >= 64rem) {
       --tw-font-weight: var(--font-weight-light);
       font-weight: var(--font-weight-light);
+    }
+  }
+  .lg\:opacity-0 {
+    @media (width >= 64rem) {
+      opacity: 0%;
+    }
+  }
+  .lg\:transition-opacity {
+    @media (width >= 64rem) {
+      transition-property: opacity;
+      transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+      transition-duration: var(--tw-duration, var(--default-transition-duration));
     }
   }
 }

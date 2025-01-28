@@ -3,10 +3,10 @@ const closeBtnEl = document.getElementById('close-btn');
 const sidebarEl = document.getElementById('sidebar');
 
 console.log(hamBtnEl);
+console.log(sidebarEl);
 
 hamBtnEl.addEventListener('click', () => {
     sidebarEl.style.display = 'block';
-    console.log('pressed');
 })
 
 closeBtnEl.addEventListener('click', () => {
