@@ -18,7 +18,7 @@
         <img class="self-center" src="./images/icon-hamburger.svg" alt="">
       </button>
     </nav>
-    <nav id="sidebar" class="hidden lg:hidden text-white fixed top-0 right-0 z-[999] h-vh w-full font-alata px-6 pt-10 bg-black">
+    <nav id="sidebar" class="hidden text-white fixed top-0 right-0 z-[999] h-vh w-full font-alata px-6 pt-10 bg-black lg:hidden">
       <div class="flex justify-between">
         <img class="h-6" src="./images/logo.svg" alt="">
         <button id="close-btn"><img class="self-center" src="./images/icon-close.svg" alt=""></button>
@@ -35,11 +35,11 @@
     <nav class="hidden lg:flex lg:justify-between lg:mx-[165px] lg:mt-16">
       <img src="./images/logo.svg" alt="">
       <ul class="flex self-center gap-8 font-alata text-white relative">
-        <li><a class="hover:border-b-2 hover:border-white lg:pb-2" href="">About</a></li>
-        <li><a class="hover:border-b-2 hover:border-white lg:pb-2" href="">Careers</a></li>
-        <li><a class="hover:border-b-2 hover:border-white lg:pb-2" href="">Events</a></li>
-        <li><a class="hover:border-b-2 hover:border-white lg:pb-2" href="">Products</a></li>
-        <li><a class="hover:border-b-2 hover:border-white lg:pb-2" href="">Support</a></li>
+        <li><a class="hover:border-b-2 hover:border-white lg:pb-2 transition-all" href="">About</a></li>
+        <li><a class="hover:border-b-2 hover:border-white lg:pb-2 transition-all" href="">Careers</a></li>
+        <li><a class="hover:border-b-2 hover:border-white lg:pb-2 transition-all" href="">Events</a></li>
+        <li><a class="hover:border-b-2 hover:border-white lg:pb-2 transition-all" href="">Products</a></li>
+        <li><a class="hover:border-b-2 hover:border-white lg:pb-2 transition-all" href="">Support</a></li>
       </ul>
     </nav>
   </header>
@@ -51,7 +51,7 @@
 
     <section id="interactive" class="mt-24 px-6 lg:mt-40 lg:px-[164px] lg:mb-[184px]">
       <div class="lg:flex lg:relative">
-        <img class="lg:hidden" src="./images/mobile/image-interactive.jpg" alt="">
+        <img class="lg:hidden md:mx-auto" src="./images/mobile/image-interactive.jpg" alt="">
         <img class="hidden lg:block w-[889px]" src="./images/desktop/image-interactive.jpg" alt="">
         <div class="text-center px-6 pt-12 flex flex-col gap-4 lg:max-w-[541px] lg:self-end lg:bg-white lg:pt-24 lg:pl-24 lg:text-left lg:absolute right-1/10">
           <h2 class="font-josefin uppercase font-light text-black text-3xl leading-7 lg:text-5xl lg:leading-12">the leader in interactive VR</h2>
@@ -67,32 +67,45 @@
       <div class="flex flex-col lg:flex lg:flex-col">
         <div class="lg:flex lg:justify-between lg:mb-20">
           <h2 class="text-center uppercase font-josefin text-3xl font-light lg:self-center lg:text-5xl">Our creations</h2>
-          <button class="hidden lg:block self-center text-[14px] uppercase font-alata tracking-[5px] font-thin py-3 px-11 border-1 border-black cursor-pointer">see all</button>
+          <button class="hidden lg:block self-center text-[14px] uppercase font-alata tracking-[5px] font-thin py-3 px-11 border-1 border-black cursor-pointer hover:bg-black hover:text-white transition-all">see all</button>
         </div>
         <div class="grid grid-cols-1 gap-6 my-12 lg:grid-cols-4 lg:gap-[30px]">
-          <div class="bg-[url(./images/mobile/image-deep-earth.jpg)] bg-center bg-cover inset-shadow-grid lg:bg-[url(./images/desktop/image-deep-earth.jpg)] lg:bg-cover lg:bg-center">
-            <p class="grid-styling-mobile lg:grid-styling-desktop">Deep <br> Earth</p>
+          <!-- <div class="bg-[url(./images/mobile/image-deep-earth.jpg)] bg-center bg-cover inset-shadow-grid lg:cursor-pointer lg:bg-[url(./images/desktop/image-deep-earth.jpg)] lg:bg-cover lg:bg-center lg:relative">
+            <div class="hover:overlay hover:opacity-10">
+              <p class="grid-styling-mobile lg:grid-styling-desktop">Deep <br> Earth</p>
+            </div>
+          </div> -->
+          <div class="relative bg-[url(./images/mobile/image-deep-earth.jpg)] bg-center bg-cover inset-shadow-grid lg:cursor-pointer lg:bg-[url(./images/desktop/image-deep-earth.jpg)] lg:bg-cover lg:bg-center lg:relative">
+            <div class="absolute inset-0 overlay-bg opacity-0 hover:opacity-100 transition-opacity z-[998]"></div>
+            <p class="relative grid-styling-mobile lg:grid-styling-desktop">Deep <br> Earth</p>
           </div>
-          <div class="bg-[url(./images/mobile/image-night-arcade.jpg)] bg-center bg-cover inset-shadow-grid lg:bg-[url(./images/desktop/image-night-arcade.jpg)] lg:bg-cover lg:bg-center">
-            <p class="grid-styling-mobile lg:grid-styling-desktop">Night <br> Arcade</p>
+          <div class="bg-[url(./images/mobile/image-night-arcade.jpg)] bg-center bg-cover inset-shadow-grid lg:cursor-pointer lg:bg-[url(./images/desktop/image-night-arcade.jpg)] lg:bg-cover lg:bg-center lg:relative">
+            <div class="absolute inset-0 overlay-bg opacity-0 hover:opacity-100 transition-opacity z-[998]"></div>
+            <p class="relative grid-styling-mobile lg:grid-styling-desktop hover:text-black">Night <br> Arcade</p>
           </div>
-          <div class="bg-[url(./images/mobile/image-soccer-team.jpg)] bg-center bg-cover inset-shadow-grid lg:bg-[url(./images/desktop/image-soccer-team.jpg)] lg:bg-cover lg:bg-center">
-            <p class="grid-styling-mobile lg:grid-styling-desktop">soccer <br> team vr</p>
+          <div class="bg-[url(./images/mobile/image-soccer-team.jpg)] bg-center bg-cover inset-shadow-grid lg:cursor-pointer lg:bg-[url(./images/desktop/image-soccer-team.jpg)] lg:bg-cover lg:bg-center lg:relative">
+            <div class="absolute inset-0 overlay-bg opacity-0 hover:opacity-100 transition-opacity z-[998]"></div>
+            <p class=" relative grid-styling-mobile lg:grid-styling-desktop">soccer <br> team vr</p>
           </div>
-          <div class="bg-[url(./images/mobile/image-grid.jpg)] bg-center bg-cover inset-shadow-grid lg:bg-[url(./images/desktop/image-grid.jpg)] lg:bg-cover lg:bg-center">
-            <p class="grid-styling-mobile lg:grid-styling-desktop">the <br> grid</p>
+          <div class="bg-[url(./images/mobile/image-grid.jpg)] bg-center bg-cover inset-shadow-grid lg:cursor-pointer lg:bg-[url(./images/desktop/image-grid.jpg)] lg:bg-cover lg:bg-center lg:relative">
+            <div class="absolute inset-0 overlay-bg opacity-0 hover:opacity-100 transition-opacity z-[998]"></div>
+            <p class=" relative grid-styling-mobile lg:grid-styling-desktop">the <br> grid</p>
           </div>
-          <div class="bg-[url(./images/mobile/image-from-above.jpg)] bg-center bg-cover inset-shadow-grid lg:bg-[url(./images/desktop/image-from-above.jpg)] lg:bg-cover lg:bg-center">
-            <p class="grid-styling-mobile lg:grid-styling-desktop">from up <br> above vr</p>
+          <div class="bg-[url(./images/mobile/image-from-above.jpg)] bg-center bg-cover inset-shadow-grid lg:cursor-pointer lg:bg-[url(./images/desktop/image-from-above.jpg)] lg:bg-cover lg:bg-center lg:relative">
+            <div class="absolute inset-0 overlay-bg opacity-0 hover:opacity-100 transition-opacity z-[998]"></div>
+            <p class=" relative grid-styling-mobile lg:grid-styling-desktop">from up <br> above vr</p>
           </div>
-          <div class="bg-[url(./images/mobile/image-pocket-borealis.jpg)] bg-center bg-cover inset-shadow-grid lg:bg-[url(./images/desktop/image-pocket-borealis.jpg)] lg:bg-cover lg:bg-center">
-            <p class="grid-styling-mobile lg:grid-styling-desktop">pocket borealis</p>
+          <div class="bg-[url(./images/mobile/image-pocket-borealis.jpg)] bg-center bg-cover inset-shadow-grid lg:cursor-pointer lg:bg-[url(./images/desktop/image-pocket-borealis.jpg)] lg:bg-cover lg:bg-center lg:relative">
+            <div class="absolute inset-0 overlay-bg opacity-0 hover:opacity-100 transition-opacity z-[998]"></div>
+            <p class=" relative grid-styling-mobile lg:grid-styling-desktop">pocket borealis</p>
           </div>
-          <div class="bg-[url(./images/mobile/image-curiosity.jpg)] bg-center bg-cover inset-shadow-grid lg:bg-[url(./images/desktop/image-curiosity.jpg)] lg:bg-cover lg:bg-center">
-            <p class="grid-styling-mobile lg:grid-styling-desktop">the <br> curiosity</p>
+          <div class="bg-[url(./images/mobile/image-curiosity.jpg)] bg-center bg-cover inset-shadow-grid lg:cursor-pointer lg:bg-[url(./images/desktop/image-curiosity.jpg)] lg:bg-cover lg:bg-center lg:relative">
+            <div class="absolute inset-0 overlay-bg opacity-0 hover:opacity-100 transition-opacity z-[998]"></div>
+            <p class=" relative grid-styling-mobile lg:grid-styling-desktop">the <br> curiosity</p>
           </div>
-          <div class="bg-[url(./images/mobile/image-fisheye.jpg)] bg-center bg-cover inset-shadow-grid lg:bg-[url(./images/desktop/image-fisheye.jpg)] lg:bg-cover lg:bg-center">
-            <p class="grid-styling-mobile lg:grid-styling-desktop">make it <br> fisheye</p>
+          <div class="bg-[url(./images/mobile/image-fisheye.jpg)] bg-center bg-cover inset-shadow-grid lg:cursor-pointer lg:bg-[url(./images/desktop/image-fisheye.jpg)] lg:bg-cover lg:bg-center lg:relative">
+            <div class="absolute inset-0 overlay-bg opacity-0 hover:opacity-100 transition-opacity z-[998]"></div>
+            <p class=" relative grid-styling-mobile lg:grid-styling-desktop">make it <br> fisheye</p>
           </div>
         </div>
         <button class="lg:hidden self-center text-[14px] uppercase font-alata tracking-[5px] font-thin py-3 px-11 border-1 border-black cursor-pointer">see more</button>
@@ -105,10 +118,10 @@
     <div class="flex flex-col items-center gap-8 mb-12 lg:items-start lg:gap-6 lg:mb-0">
       <img class="h-6" src="./images/logo.svg" alt="">
       <ul class="text-center flex flex-col gap-4 font-alata lg:flex-row lg:gap-8">
-        <li><a class="hover:border-b-2 hover:border-white lg:pb-2" href="">About</a></li>
-        <a class="hover:border-b-2 hover:border-white lg:pb-2" href="">Careers</a>
-        <a class="hover:border-b-2 hover:border-white lg:pb-2" href="">Events</a>
-        <a class="hover:border-b-2 hover:border-white lg:pb-2" href="">Products</a>
+        <li><a class="hover:border-b-2 hover:border-white lg:pb-2 transition-all" href="">About</a></li>
+        <li><a class="hover:border-b-2 hover:border-white lg:pb-2 transition-all" href="">Careers</a></li>
+        <li><a class="hover:border-b-2 hover:border-white lg:pb-2 transition-all" href="">Events</a></li>
+        <li><a class="hover:border-b-2 hover:border-white lg:pb-2 transition-all" href="">Products</a></li>
       </ul>
     </div>
     <div class="flex flex-col gap-4 lg:gap-6">
