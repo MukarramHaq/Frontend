@@ -14,9 +14,22 @@
   <header class="mt-10 px-6 absolute w-full">
     <nav class="flex justify-between">
       <img class="h-6" src="./images/logo.svg" alt="">
-      <button class="cursor-pointer">
+      <button class="ham-btn cursor-pointer">
         <img class="self-center" src="./images/icon-hamburger.svg" alt="">
       </button>
+    </nav>
+    <nav id="sidebar" class="hidden text-white fixed top-0 right-0 z-[999] h-vh w-full font-alata px-6 pt-10 bg-black">
+      <div class="flex justify-between">
+        <img class="h-6" src="./images/logo.svg" alt="">
+        <button id="close-btn"><img class="self-center" src="./images/icon-close.svg" alt=""></button>
+      </div>
+      <ul class="flex flex-col gap-6 mt-40 font-josefin font-thin text-2xl uppercase">
+        <li><a href="#about">About</a></li>
+        <li><a href="#careers">Careers</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href=#products">Products</a></li>
+        <li><a href="#support">Support</a></li>
+      </ul>
     </nav>
   </header>
   <main>
@@ -38,58 +51,64 @@
       </div>
     </section>
 
-    <section id="creations" class="border-2 border-black mt-24 px-6">
-      <h2 class="text-center uppercase font-josefin text-3xl font-light mb-12">Our creations</h2>
-      <div class="grid grid-cols-1 gap-6">
-        <div class="bg-[url(./images/mobile/image-deep-earth.jpg)] bg-center bg-cover">
-          <p class="grid-styling">Deep Earth</p>
+    <section id="creations" class="my-24 px-6">
+      <div class="flex flex-col">
+        <h2 class="text-center uppercase font-josefin text-3xl font-light">Our creations</h2>
+        <div class="grid grid-cols-1 gap-6 my-12">
+          <div class="bg-[url(./images/mobile/image-deep-earth.jpg)] bg-center bg-cover">
+            <p class="grid-styling">Deep Earth</p>
+          </div>
+          <div class="bg-[url(./images/mobile/image-night-arcade.jpg)] bg-center bg-cover inset-shadow-grid">
+            <p class="grid-styling">Night Arcade</p>
+          </div>
+          <div class="bg-[url(./images/mobile/image-soccer-team.jpg)] bg-center bg-cover inset-shadow-grid">
+            <p class="grid-styling">soccer team vr</p>
+          </div>
+          <div class="bg-[url(./images/mobile/image-grid.jpg)] bg-center bg-cover inset-shadow-grid">
+            <p class="grid-styling">the <br> grid</p>
+          </div>
+          <div class="bg-[url(./images/mobile/image-from-above.jpg)] bg-center bg-cover inset-shadow-grid">
+            <p class="grid-styling">from up above vr</p>
+          </div>
+          <div class="bg-[url(./images/mobile/image-pocket-borealis.jpg)] bg-center bg-cover inset-shadow-grid">
+            <p class="grid-styling">pocket borealis</p>
+          </div>
+          <div class="bg-[url(./images/mobile/image-curiosity.jpg)] bg-center bg-cover inset-shadow-grid">
+            <p class="grid-styling">the curiosity</p>
+          </div>
+          <div class="bg-[url(./images/mobile/image-fisheye.jpg)] bg-center bg-cover inset-shadow-grid">
+            <p class="grid-styling">make it fisheye</p>
+          </div>
         </div>
-        <div class="bg-[url(./images/mobile/image-night-arcade.jpg)] bg-center bg-cover inset-shadow-grid">
-          <p class="grid-styling">Night Arcade</p>
-        </div>
-        <div class="bg-[url(./images/mobile/image-soccer-team.jpg)] bg-center bg-cover inset-shadow-grid">
-          <p class="grid-styling">soccer team vr</p>
-        </div>
-        <div class="bg-[url(./images/mobile/image-grid.jpg)] bg-center bg-cover inset-shadow-grid">
-          <p class="grid-styling">the <br> grid</p>
-        </div>
-        <div class="bg-[url(./images/mobile/image-from-above.jpg)] bg-center bg-cover inset-shadow-grid">
-          <p class="grid-styling">from up above vr</p>
-        </div>
-        <div class="bg-[url(./images/mobile/image-pocket-borealis.jpg)] bg-center bg-cover inset-shadow-grid">
-          <p class="grid-styling">pocket borealis</p>
-        </div>
-        <div class="bg-[url(./images/mobile/image-curiosity.jpg)] bg-center bg-cover inset-shadow-grid">
-          <p class="grid-styling">the curiosity</p>
-        </div>
-        <div class="bg-[url(./images/mobile/image-fisheye.jpg)] bg-center bg-cover inset-shadow-grid">
-          <p class="grid-styling">make it fisheye</p>
-        </div>
+        <button class="self-center text-[14px] uppercase font-alata tracking-[5px] font-thin py-3 px-11 border-1 border-black cursor-pointer">see more</button>
       </div>
     </section>
     
   </main>
-  <footer></footer>
-  <!-- About
-  Careers
-  Events
-  Products
-  Support
 
-  
+  <footer class="text-white bg-black pl-[52px] pr-[51px] py-14">
+    <div class="flex flex-col items-center gap-8 mb-12">
+      <img class="h-6" src="./images/logo.svg" alt="">
+      <ul class="text-center flex flex-col gap-4 font-alata">
+        <li>About</li>
+        <li>Careers</li>
+        <li>Events</li>
+        <li>Products</li>
+      </ul>
+    </div>
+    <div class="flex flex-col gap-4">
+      <div class="flex gap-4 self-center">
+        <img src="./images/icon-facebook.svg" alt="">
+        <img src="./images/icon-twitter.svg" alt="">
+        <img src="./images/icon-pinterest.svg" alt="">
+        <img src="./images/icon-instagram.svg" alt="">
+      </div>
+      <p class="text-[15px] text-[#808080] font-alata">© 2021 Loopstudios. All rights reserved.</p>
+    </div>
+  </footer>
 
-  Our creations
-
-  See all
-
-  Deep earth
-  Night arcade
-  Soccer team VR
-  The grid
-  From up above VR
-  Pocket borealis
-  The curiosity
-  Make it fisheye
+  <script defer src="index.js"></script>
+  <!--
 
   About
   Careers
@@ -97,6 +116,6 @@
   Products
   Support
 
-  © 2021 Loopstudios. All rights reserved. -->
+   -->
 </body>
 </html>
