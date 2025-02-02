@@ -8,9 +8,9 @@ button{
     font-size: 20px;
     font-weight: 500;
     line-height: 1;
-    transition: transform 250ms cubic-bezier(0.1, 0.2, 0.3, 0.4);
+    transition: transform 100ms cubic-bezier(0.1, 0.2, 0.3, 0.4);
 }
 
 button:hover{
-    transform: translateY(30px);
+    transform: translateY(10px);
 }
