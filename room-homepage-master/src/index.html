@@ -1,84 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="output.css">
-  
-  <title>Frontend Mentor | Room homepage</title>
-</head>
-<body class="font-spartan">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="output.css" />
 
-  <header class="absolute w-full mx-6 my-[48px] border-2 border-black">
+    <title>Frontend Mentor | Room homepage</title>
+  </head>
+  <body class="font-spartan">
+    <!-- my-[48px] -->
+    <header class="absolute w-full">
+      <nav
+        class="sidebar hidden px-6 py-12 fixed justify-center bg-white items-center gap-16 z-[999]"
+      >
+        <img class="close-btn" src="../assets/images/icon-close.svg" alt="" />
 
-    <nav class="px-6 py-12 fixed -top-12 flex gap-16 z-[999]">
-      <img class="self-center" src="../assets/images/icon-close.svg" alt="">
-      <ul class="self-center flex gap-8">
-        <li><a href="">home</a></li>
-        <li><a href="">shop</a></li>
-        <li><a href="">about</a></li>
-        <li><a href="">contact</a></li>
-      </ul>
-    </nav>
+        <ul class="self-center flex gap-8">
+          <li><a class="font-bold" href="">home</a></li>
+          <li><a class="font-bold" href="">shop</a></li>
+          <li><a class="font-bold" href="">about</a></li>
+          <li><a class="font-bold" href="">contact</a></li>
+        </ul>
+      </nav>
 
-    <nav class="flex items-center justify-between z-[999]">
-      <button class="lg:hidden">
-        <img src="../assets/images/icon-hamburger.svg" alt="">
-      </button>
-      <div class="absolute left-1/2 transform -translate-x-1/2">
-        <img class="self-center" src="../assets/images/logo.svg" alt="">
-      </div>
-    </nav>
-    
-  </header>
+      <nav class="px-6 flex items-center justify-between my-[48px]">
+        <button class="ham-btn lg:hidden">
+          <img src="../assets/images/icon-hamburger.svg" alt="" />
+        </button>
+        <div class="absolute left-1/2 transform -translate-x-1/2">
+          <img class="self-center" src="../assets/images/logo.svg" alt="" />
+        </div>
+      </nav>
+    </header>
 
-  <main>
+    <main>
+      <section>
 
-    <section>
-
-      <div class="bg-[url(../assets/images/mobile-image-hero-1.jpg)] bg-cover bg-center bg-no-repeat min-h-[40svh] flex flex-col-reverse items-end">
-        <div class="border-2 border-black inline-block bg-black">
+        <div id="slider-container" class="flex overflow-hidden">
+          <!-- <div class="bg-[url(../assets/images/mobile-image-hero-1.jpg)] bg-cover bg-center bg-no-repeat ">
+          
+          </div> -->
+          <div class="flex transition-transform duration-500">
+            <img src="../assets/images/mobile-image-hero-1.jpg" alt="">
+            <img src="../assets/images/mobile-image-hero-2.jpg" alt="">
+            <img src="../assets/images/mobile-image-hero-3.jpg" alt="">
+          </div>
+          <!-- <div class="bg-[url(../assets/images/mobile-image-hero-2.jpg)] bg-cover bg-center bg-no-repeat"></div> -->
+        </div>
+        <div class="border-2 border-black inline-block bg-black absolute right-0 top-[292px]">
           <button class="px-6 py-5">
-            <img src="../assets/images/icon-angle-left.svg" alt="">
+            <img src="../assets/images/icon-angle-left.svg" alt="" />
           </button>
           <button class="px-6 py-5">
-            <img src="../assets/images/icon-angle-right.svg" alt="">
+            <img src="../assets/images/icon-angle-right.svg" alt="" />
           </button>
         </div>  
-      </div>
+        
+        
 
-      <!-- Discover section -->
-      <div class="py-14 px-8">
-        <h1 class="mb-4 text-4xl font-semibold leading-8">Discover innovative ways to decorate</h1>
-        <p class="text-para leading-6 text-base mb-10">We provide unmatched quality, comfort, and style for property owners across the country. 
-          Our experts combine form and function in bringing your vision to life. Create a room in your 
-          own style with our collection and make your property a reflection of you and what you love.</p>
-        <button class="flex gap-7">
-          <p class="uppercase tracking-[12.5px]">shop now</p>
-          <img class="self-center" src="../assets/images/icon-arrow.svg" alt="">
-        </button>
-      </div>
+        <!-- Discover section -->
+        <div class="py-14 px-8">
+          <h1 class="mb-4 text-4xl font-semibold leading-8">
+            Discover innovative ways to decorate
+          </h1>
+          <p class="text-para leading-6 text-base mb-10">
+            We provide unmatched quality, comfort, and style for property owners
+            across the country. Our experts combine form and function in
+            bringing your vision to life. Create a room in your own style with
+            our collection and make your property a reflection of you and what
+            you love.
+          </p>
+          <button class="flex gap-7">
+            <p class="uppercase tracking-[12.5px]">shop now</p>
+            <img
+              class="self-center"
+              src="../assets/images/icon-arrow.svg"
+              alt=""
+            />
+          </button>
+        </div>
+      </section>
 
-    </section>
-
-    <section>
-
-      <div class="bg-[url(../assets/images/image-about-dark.jpg)] bg-cover bg-center min-h-[24.24vh]"></div>
-      <div class="px-8 py-14">
-        <p class="uppercase font-bold tracking-[5.83px] text-base mb-4">About our furniture</p>
-        <p class="text-para leading-6 tracking-[-0.33px]">Our multifunctional collection blends design and function to suit your individual taste.
-          Make each room unique, or pick a cohesive theme that best express your interests and what
-          inspires you. Find the furniture pieces you need, from traditional to contemporary styles
-          or anything in between. Product specialists are available to help you create your dream space.</p>
-      </div>
-      <div class="bg-[url(../assets/images/image-about-light.jpg)] bg-cover bg-center min-h-[24.24vh]"></div>
-
-    </section>
-
-  </main>
-  <!-- Home
+      <section>
+        <div
+          class="bg-[url(../assets/images/image-about-dark.jpg)] bg-cover bg-center min-h-[24.24vh]"
+        ></div>
+        <div class="px-8 py-14">
+          <p class="uppercase font-bold tracking-[5.83px] text-base mb-4">
+            About our furniture
+          </p>
+          <p class="text-para leading-6 tracking-[-0.33px]">
+            Our multifunctional collection blends design and function to suit
+            your individual taste. Make each room unique, or pick a cohesive
+            theme that best express your interests and what inspires you. Find
+            the furniture pieces you need, from traditional to contemporary
+            styles or anything in between. Product specialists are available to
+            help you create your dream space.
+          </p>
+        </div>
+        <div
+          class="bg-[url(../assets/images/image-about-light.jpg)] bg-cover bg-center min-h-[24.24vh]"
+        ></div>
+      </section>
+    </main>
+    <!-- Home
   Shop
   About
   Contact
@@ -109,5 +142,6 @@
 
    -->
 
-</body>
+    <script defer src="./index.js"></script>
+  </body>
 </html>
