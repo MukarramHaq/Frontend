@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: League Spartan;
+    src: url("../assets/fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf");
+}
+
+@theme {
+    --font-spartan: League Spartan, sans-serif;
+
+    --color-para: #A0A0A0;
+}
